@@ -28,23 +28,11 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-wordpress`,
+      resolve: `gatsby-source-wordpress-experimental`,
       options: {
-        baseUrl: `localhost:8080`,
-        protocol: `http`,
-        hostingWPCOM: false,
-        useACF: false,
-        searchAndReplaceContentUrls: {
-          sourceUrl: `http://localhost:8080`,
-          replacementUrl: ``,
-        },
-        excludedRoutes: [
-          `/wp/v2/users/**`,
-          `/wp/v2/settings*`,
-          `/wp/v2/themes*`,
-        ],
+        url: `http://localhost:8080/graphql`,
       },
-    },
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

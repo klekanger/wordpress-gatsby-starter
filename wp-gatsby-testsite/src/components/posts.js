@@ -3,26 +3,23 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 
 const Posts = () => {
   const data = useStaticQuery(graphql`
-    query posts {
-      allWordpressPost(sort: { fields: date, order: DESC }, limit: 9) {
+    query MyQuery {
+      allWpPost {
         edges {
           node {
-            title
-            content
-            id
             slug
+            title
             excerpt
-            date
-            modified
+            content
           }
         }
       }
-    }
+    }  
   `)
 
   return (
     <>
-      {data.allWordpressPost.edges.map(({ node }) => (
+      {data.allWpPost.edges.map(({ node }) => (
         <div key={node.slug}>
           <h2>{node.title}</h2>
           <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />

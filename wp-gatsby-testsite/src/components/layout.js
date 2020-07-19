@@ -12,12 +12,14 @@ const Layout = ({ children }) => {
     },
   } = useStaticQuery(
     graphql`
-      query siteMetadata {
-        data: allWordpressSiteMetadata {
+      query {
+        data: allWp {
           edges {
             node {
-              name
-              description
+              generalSettings {
+                title
+                description
+              }
             }
           }
         }
@@ -27,7 +29,8 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.name} siteDesc={data.description} />
+    {console.log(data)}
+      <Header siteTitle={data.generalSettings.title} siteDesc={data.generalSettings.description} />
 
       <main>{children}</main>
 
