@@ -8,7 +8,7 @@ import "./layout.css"
 const Layout = ({ children }) => {
   const {
     data: {
-      edges: [{ node: data }],
+      edges: [{ node: data}],
     },
   } = useStaticQuery(
     graphql`
@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
         data: allWp {
           edges {
             node {
-              generalSettings {
+                generalSettings {
                 title
                 description
               }
@@ -25,12 +25,14 @@ const Layout = ({ children }) => {
         }
       }
     `
-  )
+  ) 
+
+  const title = data.generalSettings.title || "Please set site title in Wordpress"
+  const description = data.generalSettings.description || "Please set site description in Wordpress"
 
   return (
     <>
-    {console.log(data)}
-      <Header siteTitle={data.generalSettings.title} siteDesc={data.generalSettings.description} />
+      <Header siteTitle={title} siteDesc={description} />
 
       <main>{children}</main>
 
