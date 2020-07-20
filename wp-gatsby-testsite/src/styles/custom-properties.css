@@ -1,0 +1,42 @@
+/* palette from
+https://www.colourlovers.com/palette/4681998/Overtly_Laced_Boots
+#F3E5CB,#BCB599,#36362C,#665B3F,#779796,#F3E5CB,#BCB599,#36362C
+
+@import url('https://fonts.googleapis.com/css?family=Karla:400,400i,700|Lato:400,400i&display=swap');
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i|Josefin+Sans&display=swap");
+
+:root {
+  --font-family-sans: "Josefin Sans", sans-serif;
+  --font-family-txt: "Lato", sans-serif;
+
+  --color-maintext: rgb(22, 22, 22);
+  --color-dark-gray: #fff;
+  --color-gray: #697a90;
+  --color-background: #918f8f;
+  --color-background2: #252626;
+  --color-very-light-gray: #e7ebed;
+  --color-white: #fff;
+  --color-accent: #fff;
+  --color-logo1: #1d1b1a;
+  --color-logo2: #014074;
+
+  /* Typography */
+  --unit: 16;
+  --font-micro-size: calc(10 / var(--unit) * 1rem); /* 10px */
+  --font-micro-line-height: calc(12 / 10); /* 12px */
+  --font-small-size: calc(14 / var(--unit) * 1rem); /* 14px */
+  --font-small-line-height: calc(21 / 14); /* 21px */
+  --font-base-size: 1em; /* 16px */
+  --font-base-line-height: calc(24 / var(--unit)); /* 24px */
+  --font-large-size: calc(18 / var(--unit) * 1rem); /* 18px */
+  --font-large-line-height: calc(27 / 18); /* 27px */
+
+  --font-title3-size: calc(21 / var(--unit) * 1rem); /* 21px */
+  --font-title3-line-height: calc(30 / 21); /* 30px */
+  --font-title2-size: calc(24 / var(--unit) * 1rem); /* 24px */
+  --font-title2-line-height: calc(33 / 24); /* 33px */
+  --font-title1-size: calc(49 / var(--unit) * 1rem); /* 49px */
+  --font-title1-line-height: calc(57 / 49); /* 57px */
+}

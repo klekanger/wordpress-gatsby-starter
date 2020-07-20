@@ -1,0 +1,7 @@
+@import "../styles/custom-media.css";
+
+.container {
+  margin: auto;
+  width: 100%;
+  background-color: grey;
+}

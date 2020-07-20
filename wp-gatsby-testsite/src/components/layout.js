@@ -3,32 +3,31 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import "./layout.css"
+import "../styles/layout.css"
 
 const Layout = ({ children }) => {
   const {
     data: {
-      edges: [{ node: data}],
+      nodes: [{ generalSettings: data }],
     },
   } = useStaticQuery(
     graphql`
       query {
         data: allWp {
-          edges {
-            node {
-                generalSettings {
-                title
-                description
-              }
+          nodes {
+            generalSettings {
+              title
+              description
             }
           }
         }
       }
     `
-  ) 
+  )
 
-  const title = data.generalSettings.title || "Please set site title in Wordpress"
-  const description = data.generalSettings.description || "Please set site description in Wordpress"
+  const title = data.title || "Please set site title in Wordpress"
+  const description =
+    data.description || "Please set site description in Wordpress"
 
   return (
     <>
@@ -37,7 +36,7 @@ const Layout = ({ children }) => {
       <main>{children}</main>
 
       <footer>
-        © {new Date().getFullYear()}, Built with
+        © {new Date().getFullYear()}, Laget med
         {` `}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
       </footer>

@@ -1,21 +1,21 @@
 import React from "react"
-import {  useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 const Posts = () => {
   const data = useStaticQuery(graphql`
-  query MyQuery {
-    allWpPost(sort: {fields: date, order: DESC}) {
-      edges {
-        node {
-          date
-          slug
-          title
-          excerpt
-          content
+    query getPosts {
+      allWpPost(sort: { fields: date, order: DESC }) {
+        edges {
+          node {
+            date
+            slug
+            title
+            excerpt
+            content
+          }
         }
       }
     }
-  }
   `)
 
   const postNodes = (data || {}).allWpPost
@@ -30,7 +30,6 @@ const Posts = () => {
       ))}
     </>
   )
-
 }
 
 export default Posts
