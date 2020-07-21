@@ -10,22 +10,17 @@
   box-sizing: border-box;
   margin: 0 auto;
   max-width: 95%;
-  padding: 1em;
-  display: flex;
+  padding: 0.5em;
   justify-content: space-between;
 }
 
-.logoColor1 {
+.siteTitle {
   color: var(--color-logo1);
-}
-.logoColor2 {
-  color: var(--color-logo2);
-}
-
-.branding {
   font-weight: 400;
   font-size: 2.5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+.siteDesc {
+  color: var(--color-logo2);
+  font-weight: 400;
+  font-size: 1.5em;
 }

@@ -5,8 +5,6 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Container from "../components/container"
-// import Header from "../components/header"
-// import Posts from "../components/posts"
 import PostPreviewGrid from "../components/postPreviewGrid"
 import GraphqlErrorList from "../components/graphqlErrorList"
 
