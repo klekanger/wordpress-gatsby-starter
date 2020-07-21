@@ -8,6 +8,8 @@ import Container from "../components/container"
 import PostPreviewGrid from "../components/postPreviewGrid"
 import GraphqlErrorList from "../components/graphqlErrorList"
 
+// Get Wordpress posts
+// Change limit to set max number of posts returned from query
 export const query = graphql`
   query allPosts {
     allWpPost(limit: 6, sort: { fields: date, order: DESC }) {

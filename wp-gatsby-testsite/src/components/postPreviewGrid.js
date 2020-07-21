@@ -1,3 +1,5 @@
+// Grid showing the last X posts
+
 import React from "react"
 
 import styles from "./postPreviewGrid.module.css"
