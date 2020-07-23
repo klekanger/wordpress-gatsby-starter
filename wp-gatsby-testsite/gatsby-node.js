@@ -8,6 +8,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const {
     data: {
       allWpPost: { nodes: allPosts },
+      allWpPage: { nodes: allPages },
     },
   } = await graphql(`
     query {
@@ -17,10 +18,17 @@ exports.createPages = async ({ graphql, actions }) => {
           uri
         }
       }
+      allWpPage {
+        nodes {
+          id
+          uri
+        }
+      }
     }
   `)
 
   const postTemplate = path.resolve(`./src/templates/post.js`)
+  const pageTemplate = path.resolve(`./src/templates/page.js`)
 
   allPosts.forEach(post => {
     createPage({
@@ -32,6 +40,16 @@ exports.createPages = async ({ graphql, actions }) => {
       // as a GraphQL variable to query for this post's data.
       context: {
         id: post.id,
+      },
+    })
+  })
+
+  allPages.forEach(page => {
+    createPage({
+      path: page.uri,
+      component: slash(pageTemplate),
+      context: {
+        id: page.id,
       },
     })
   })

@@ -3,6 +3,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Navbar from "./navbar"
 import styles from "./layout.module.css"
 
 const Layout = ({ children }) => {
@@ -10,6 +11,7 @@ const Layout = ({ children }) => {
     data: {
       nodes: [{ generalSettings: data }],
     },
+    pages,
   } = useStaticQuery(
     graphql`
       query {
@@ -19,6 +21,13 @@ const Layout = ({ children }) => {
               title
               description
             }
+          }
+        }
+        pages: allWpPage {
+          nodes {
+            id
+            uri
+            title
           }
         }
       }
@@ -32,8 +41,8 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Navbar pages={pages} />
       <Header siteTitle={title} siteDesc={description} />
-
       <main>{children}</main>
 
       <footer>

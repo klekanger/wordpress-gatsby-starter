@@ -8,8 +8,8 @@
 
 .wrapper {
   margin: 0 auto;
-  max-width: 95%;
-  padding: 0.5em;
+  padding: 10px 0 10px 0;
+  background-color: rgb(138, 138, 138);
   justify-content: space-between;
 }
 
