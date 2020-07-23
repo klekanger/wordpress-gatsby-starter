@@ -53,6 +53,10 @@
   }
 }
 
+.listItem a {
+  text-decoration: none;
+}
+
 .title {
   font-family: var(--font-family-sans);
   font-size: var(--font-title2-size);
@@ -61,4 +65,5 @@
 .excerpt {
   font-family: var(--font-family-txt);
   font-size: var(--font-base-size);
+  text-decoration: none;
 }

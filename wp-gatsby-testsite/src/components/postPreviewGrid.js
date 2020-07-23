@@ -15,12 +15,14 @@ const PostPreviewGrid = props => {
             <Link to={node.uri}>
               <h2 className={styles.title}>{node.title}</h2>
             </Link>
-            <p>Date: {node.date}</p>
             <div
               className={styles.excerpt}
               dangerouslySetInnerHTML={{ __html: node.excerpt }}
             />
-            <span style={{ color: "#11a" }}>Publisert: {node.date}</span>
+            <Link to={node.uri} className={styles.excerpt}>
+              Les mer...
+            </Link>
+            <p style={{ color: "#999" }}>Publisert: {node.date}</p>
           </li>
         ))}
       </ul>
