@@ -1,12 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
-// import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Container from "../components/container"
 import PostPreviewGrid from "../components/postPreviewGrid"
 import GraphqlErrorList from "../components/graphqlErrorList"
+
+import "../styles/globalStyles.css"
 
 // Get Wordpress posts
 // Change limit to set max number of posts returned from query
@@ -15,8 +16,9 @@ export const query = graphql`
     allWpPost(limit: 6, sort: { fields: date, order: DESC }) {
       edges {
         node {
-          date
+          date(formatString: "DD. MMMM YYYY", locale: "NB-NO")
           slug
+          uri
           title
           excerpt
           content

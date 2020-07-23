@@ -23,8 +23,3 @@ body > div > div {
 a {
   color: var(--color-accent);
 }
-
-footer {
-  text-align: center;
-  margin: 0 0 15px 0;
-}

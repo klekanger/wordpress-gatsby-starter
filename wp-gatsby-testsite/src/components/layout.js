@@ -3,7 +3,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import "../styles/layout.css"
+import styles from "./layout.module.css"
 
 const Layout = ({ children }) => {
   const {
@@ -25,6 +25,7 @@ const Layout = ({ children }) => {
     `
   )
 
+  // Retrieve the site title and description from Wordpress
   const title = data.title || "Please set site title in Wordpress"
   const description =
     data.description || "Please set site description in Wordpress"

@@ -1,6 +1,7 @@
 // Grid showing the last X posts
 
 import React from "react"
+import { Link } from "gatsby"
 
 import styles from "./postPreviewGrid.module.css"
 
@@ -11,11 +12,15 @@ const PostPreviewGrid = props => {
       <ul className={styles.container}>
         {props.nodes.edges.map(({ node }) => (
           <li key={node.slug} className={styles.listItem}>
-            <h2 className={styles.title}>{node.title}</h2>
+            <Link to={node.uri}>
+              <h2 className={styles.title}>{node.title}</h2>
+            </Link>
+            <p>Date: {node.date}</p>
             <div
               className={styles.excerpt}
               dangerouslySetInnerHTML={{ __html: node.excerpt }}
             />
+            <span style={{ color: "#11a" }}>Publisert: {node.date}</span>
           </li>
         ))}
       </ul>
