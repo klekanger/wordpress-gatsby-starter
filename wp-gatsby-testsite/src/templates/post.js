@@ -1,3 +1,6 @@
+// Template used for programmatically creating posts from data fetched from Wordpress
+// Used by the createPage function in gatsby-node.js
+
 import React from "react"
 import { Link, graphql } from "gatsby"
 
@@ -23,6 +26,8 @@ const postTemplate = ({ data }) => {
 }
 export default postTemplate
 
+// The $id comes from the createPage function in gatsby-node.js
+// Query the post with this ID, and use it in this template
 export const query = graphql`
   query post($id: String!) {
     page: wpPost(id: { eq: $id }) {
