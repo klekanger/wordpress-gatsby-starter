@@ -45,10 +45,16 @@ const Layout = ({ children }) => {
       <Header siteTitle={title} siteDesc={description} />
       <main>{children}</main>
 
-      <footer>
-        © {new Date().getFullYear()}, Laget med
+      <footer className={styles.pageFooter}>
+        Kurt Lekanger © {new Date().getFullYear()}, made with
         {` `}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <p>
+          Download template from{" "}
+          <a href="https://github.com/klekanger/wordpress-gatsby-starter">
+            my Github page
+          </a>
+        </p>
       </footer>
     </>
   )

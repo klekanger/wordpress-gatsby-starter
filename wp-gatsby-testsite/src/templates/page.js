@@ -2,14 +2,14 @@
 // Used by the createPage function in gatsby-node.js
 
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import styles from "./post.module.css"
 
 const pageTemplate = ({ data }) => {
   const { page } = data
-  const { title, content, featuredImage } = page
+  const { title, content } = page
   return (
     <Layout>
       <div className={styles.postContainer}>
