@@ -1,0 +1,30 @@
+.postContainer {
+  margin: 10px 20vw 40px 0px;
+  padding: 0;
+  list-style: none;
+  display: block;
+
+  @media (--media-min-medium) {
+    margin-left: 10px;
+  }
+
+  @media (--media-min-large) {
+    margin-left: 40px;
+  }
+}
+
+.postContainer p,
+h1,
+h2,
+h3,
+h4 {
+  padding-left: 40px;
+}
+
+.backLink {
+  padding-left: 40px;
+}
+
+.header {
+  padding-top: 5vh;
+}
