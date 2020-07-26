@@ -10,7 +10,7 @@ If you haven't done that already, install the Gatsby CLI on your computer:
 
     npm install -g gatsby-cli
 
-Then you can either clone this Github repository the normal way, or push the "Use this template" to create a new repository with the same folders and files in your own Github account.
+Then you can either clone this Github repository the normal way, or push the "Use this template" to create a new repository with the same folders and files in your own Github account. Or just download the zip file.
 
 When you have cloned or copied all the files to your computer, go to the `wp-gatsby-testsite` folder and type
 
@@ -29,14 +29,6 @@ Then you should update `gatsby-config.js` with the correct path to the GraphQL e
     {
       resolve: `gatsby-source-wordpress-experimental`,
       options: {
-        url: `http://localhost:8080/graphql`,
-      },
-    },
-    {
-      resolve: "gatsby-source-graphql",
-      options: {
-        typeName: "WPGraphQL",
-        fieldName: "wpgraphql",
         url: `http://localhost:8080/graphql`,
       },
     },
