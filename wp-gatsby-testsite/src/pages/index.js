@@ -41,9 +41,10 @@ const IndexPage = props => {
 
   const postNodes = (data || {}).allWpPost
 
+  // Replace with relevant keywords for your site (for SEO)
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Home" keywords={["gatsby", "wordpress", "starter"]} />
       <Container>
         <PostPreviewGrid title="Siste innlegg" nodes={postNodes} />
       </Container>

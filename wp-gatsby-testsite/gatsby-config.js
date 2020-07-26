@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Wordpress as a headless CMS with Gatsby`,
+    description: `Simple starter for a Gatsby project fetching data from Wordpress via the gatsby-source-wordpress@v4 plugin`,
+    author: `kurt@lekanger.no`,
   },
   plugins: [
     `gatsby-plugin-postcss`,
