@@ -34,5 +34,13 @@ module.exports = {
         url: `http://localhost:8080/graphql`,
       },
     },
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "WPGraphQL",
+        fieldName: "wpgraphql",
+        url: `http://localhost:8080/graphql`,
+      },
+    },
   ],
 }
