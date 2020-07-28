@@ -51,7 +51,6 @@ Or read this [blogpost](https://www.gatsbyjs.org/blog/2020-07-07-wordpress-sourc
 
 ## Known issues
 
-- Sitemetadata in SEO component should be retrieved from Wordpress, not Gatsby
 - The URL for the Wordpress site is now hard coded into gatsby-config.js. This could be fetched from an .env file instead for easier customization.
 
 ...and probably a lot of other things. :-)
