@@ -6,6 +6,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import styles from "./post.module.css"
+import "@wordpress/block-library/build-style/style.css"
 
 const pageTemplate = ({ data }) => {
   const { page } = data
