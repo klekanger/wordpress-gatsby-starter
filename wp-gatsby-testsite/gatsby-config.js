@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Wordpress as a headless CMS with Gatsby`,
@@ -31,7 +35,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress-experimental`,
       options: {
-        url: `http://localhost:8080/graphql`,
+        url: process.env.GATSBY_GRAPHQL_URL,
       },
     },
     {
@@ -39,7 +43,7 @@ module.exports = {
       options: {
         typeName: "WPGraphQL",
         fieldName: "wpgraphql",
-        url: `http://localhost:8080/graphql`,
+        url: process.env.GATSBY_GRAPHQL_URL,
       },
     },
   ],
