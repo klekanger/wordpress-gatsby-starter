@@ -6,7 +6,6 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import styles from "./post.module.css"
-import "@wordpress/block-library/build-style/style.css"
 
 const postTemplate = ({ data }) => {
   const { page } = data
@@ -16,7 +15,7 @@ const postTemplate = ({ data }) => {
       <div className={styles.postContainer}>
         <article>
           <h4 className={styles.blogTitle}>{title}</h4>
-          <div
+          <span
             className={styles.blogText}
             dangerouslySetInnerHTML={{ __html: content }}
           />

@@ -1,3 +1,6 @@
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
+
 .postContainer {
   margin: 10px 20vw 40px 0px;
   padding: 0;

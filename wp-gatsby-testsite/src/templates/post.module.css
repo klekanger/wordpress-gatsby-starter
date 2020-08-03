@@ -1,3 +1,6 @@
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
+
 .blogTitle {
   font-family: var(--font-family-sans);
   font-size: var(--font-title1-size);
@@ -9,7 +12,7 @@
 }
 
 .postContainer {
-  margin: 10px 20vw 40px 0px;
+  margin: 10px 20px 40px -10px;
   padding: 0;
   list-style: none;
   display: block;
@@ -20,11 +23,12 @@
 
   @media (--media-min-large) {
     margin-left: 40px;
+    margin-right: 30vw;
   }
 }
 
 .postContainer figure {
-  margin-left: 10px;
+  margin-left: 20px;
   margin-right: 0;
   padding: 0;
 
@@ -33,7 +37,7 @@
   }
 
   @media (--media-min-large) {
-    margin-left: 40px;
+    margin-left: 20px;
   }
 }
 

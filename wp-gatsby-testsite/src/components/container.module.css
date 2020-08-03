@@ -1,4 +1,5 @@
 @import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
 
 .container {
   margin: auto;
