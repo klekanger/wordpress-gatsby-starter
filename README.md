@@ -4,7 +4,7 @@ This is meant to be used as a simple starter project if you want to use Wordpres
 
 The main project is in the folder `wp-gatsby-testsite`. I have also included another folder, `wp-docker`, that contains a .yml file for setting up a Docker container with Wordpress and a MySQL database. To use this, just install [Docker Desktop](https://docs.docker.com/compose/install/) and then run the following command (in the wp-docker folder): `docker-compose up -d`.
 
-**[Demo site >>](https://5f27e7bae05c4583c4f3bf8c--dreamy-spence-905ae0.netlify.app/)**
+**[Demo site >>](https://wp-gatsby-starter.netlify.app/)**
 
 ## How to use wordpress-gatsby-starter
 
