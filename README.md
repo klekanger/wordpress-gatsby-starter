@@ -43,9 +43,3 @@ I have tried to keep this starter as simple as possible, so it should be quite e
 You can learn more about the `gatsby-source-wordpress@v4` (experimental) here: https://github.com/gatsbyjs/gatsby-source-wordpress-experimental/#readme
 
 Or read this [blogpost](https://www.gatsbyjs.org/blog/2020-07-07-wordpress-source-beta/) about the announcement of the new source plugin for Wordpress.
-
-## Known issues
-
-- The URL for the Wordpress site is now hard coded into gatsby-config.js. This could be fetched from an .env file instead for easier customization.
-
-...and probably a lot of other things. :-)
