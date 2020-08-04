@@ -26,14 +26,7 @@ Open the admin page of your Wordpress instance and install the plugins that are 
 
 Go to plugins and install [WPGraphQL](https://github.com/wp-graphql/wp-graphql) and [WPGatsby](https://github.com/gatsbyjs/wp-gatsby) (you have to download them as zip files and upload them to Wordpress, then activate them.)
 
-Then you should update `gatsby-config.js` with the correct path to the GraphQL endpoint on your Wordpress site. If you're running my local Docker instance of Wordpress on port 8080, you should be good to go. If not, change the `url` option in `gatsby-config.js`:
-
-    {
-      resolve: `gatsby-source-wordpress-experimental`,
-      options: {
-        url: `http://localhost:8080/graphql`,
-      },
-    },
+Then you need to rename `.env.example` to `.env.development` or `.env.production` depending on your current environment and update the correct path in `GATSBY_GRAPHQL_URL` to the GraphQL endpoint on your Wordpress site. If you're running my local Docker instance of Wordpress on port 8080, you only need to rename the `.env` file.
 
 Now it's time to test if everything works. When in the `wp-gatsby-testsite` folder, type:
 
