@@ -6,6 +6,8 @@ The main project is in the folder `wp-gatsby-testsite`. I have also included ano
 
 **[Demo site >>](https://wp-gatsby-starter.netlify.app/)**
 
+Read my (Norwegian) blog post [about this project here](https://www.lekanger.no/project/wordpress-som-headless-cms-for-et-nettsted-bygget-med-gatsby-og-react/).
+
 ## How to use wordpress-gatsby-starter
 
 If you haven't done that already, install the Gatsby CLI on your computer:
