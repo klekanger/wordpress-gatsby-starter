@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "wordpress-gatsby-starter",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A simple starter for using Wordpress as a headless CMS with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Kurt Lekanger <kurt@lekanger.no>",
   "dependencies": {
     "@wordpress/block-library": "^2.22.4",
     "dotenv": "^8.2.0",
@@ -29,9 +29,9 @@
     "postcss-preset-env": "^6.7.0"
   },
   "keywords": [
-    "gatsby"
+    "gatsby, wordpress, headless, cms"
   ],
-  "license": "0BSD",
+  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -43,9 +43,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+   "url": "https://github.com/klekanger/wordpress-gatsby-starter"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/klekanger/wordpress-gatsby-starter/issues"
   }
 }
