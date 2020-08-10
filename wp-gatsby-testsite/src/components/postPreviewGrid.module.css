@@ -35,12 +35,11 @@
 
   @media (--media-min-large) {
     grid-template-columns: 1fr 1fr 1fr;
-    margin-bottom: 0;
   }
 }
 
 .listItem {
-  margin: 0 15px 0 10px;
+  margin: 0 15px -20px 10px;
   padding: 10px;
 
   @media (--media-min-medium) {
@@ -62,6 +61,7 @@
   font-family: var(--font-family-sans);
   font-size: var(--font-title2-size);
   padding: 0;
+  margin-bottom: 0;
 }
 
 .excerpt {

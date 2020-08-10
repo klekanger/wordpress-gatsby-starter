@@ -80,8 +80,15 @@ a {
   padding-left: 2em;
 }
 .listItem {
-  color: var(--color-accent);
-  font-weight: normal;
+  margin-bottom: 50px;
+}
+
+.listItem p {
+  margin-top: 0;
+}
+
+.listItem h3 {
+  margin: 0;
 }
 
 .selected {

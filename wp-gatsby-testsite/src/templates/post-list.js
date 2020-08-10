@@ -23,7 +23,7 @@ const PostList = props => {
         <h1>Alle innlegg</h1>
         {posts.nodes.map(post => {
           return (
-            <div key={post.id}>
+            <div key={post.id} className={styles.listItem}>
               <Link to={post.uri}>
                 <h3>{post.title}</h3>
               </Link>
