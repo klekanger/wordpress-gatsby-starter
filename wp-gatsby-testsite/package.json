@@ -2,7 +2,7 @@
   "name": "wordpress-gatsby-starter",
   "private": true,
   "description": "A simple starter for using Wordpress as a headless CMS with Gatsby",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Kurt Lekanger <kurt@lekanger.no>",
   "dependencies": {
     "@wordpress/block-library": "^2.22.4",
