@@ -7,7 +7,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import styles from "./post.module.css"
 
-const pageTemplate = ({ data }) => {
+const PageTemplate = ({ data }) => {
   const { page } = data
   const { title, content } = page
   return (
@@ -24,7 +24,7 @@ const pageTemplate = ({ data }) => {
     </Layout>
   )
 }
-export default pageTemplate
+export default PageTemplate
 
 // The $id comes from the createPage function in gatsby-node.js
 // Query the page with this ID, and use it in this template

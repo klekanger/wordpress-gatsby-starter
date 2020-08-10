@@ -8,14 +8,14 @@
   --font-family-sans: "Josefin Sans", sans-serif;
   --font-family-txt: "Lato", sans-serif;
 
-  --color-maintext: rgb(22, 22, 22);
+  --color-maintext: #111;
   --color-text2: #fff;
   --color-text3: #697a90;
   --color-text4: #fff;
   --color-background: #e2e2e2;
   --color-background2: #252626;
   --color-background3: #e7ebed;
-  --color-accent: rgb(101, 90, 122);
+  --color-accent: #777;
   --color-logo1: #1d1b1a;
   --color-logo2: #014074;
 
