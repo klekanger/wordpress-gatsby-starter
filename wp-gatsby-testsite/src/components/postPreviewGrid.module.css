@@ -35,11 +35,12 @@
 
   @media (--media-min-large) {
     grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 0;
   }
 }
 
 .listItem {
-  margin: 0 15px -20px 10px;
+  margin: 0 15px 0 10px;
   padding: 10px;
 
   @media (--media-min-medium) {
@@ -67,4 +68,12 @@
   font-family: var(--font-family-txt);
   font-size: var(--font-base-size);
   text-decoration: none;
+}
+
+.allPostsLink {
+  margin: 0;
+}
+
+.allPostsLink h3 {
+  padding-left: 25px;
 }

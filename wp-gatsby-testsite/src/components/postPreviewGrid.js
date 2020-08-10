@@ -26,6 +26,10 @@ const PostPreviewGrid = props => {
           </li>
         ))}
       </ul>
+
+      <Link to="/allposts/" className={styles.allPostsLink}>
+        <h3 className={styles.allPostsLink}>{`>> View all posts`}</h3>
+      </Link>
     </div>
   )
 }
