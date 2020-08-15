@@ -6,6 +6,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import styles from "./post-list.module.css"
 
 const PostList = props => {
@@ -19,6 +20,7 @@ const PostList = props => {
 
   return (
     <Layout>
+      <SEO title={data.site.siteMetadata.title || "Untitled"} />
       <div className={styles.postContainer}>
         <h1>Alle innlegg</h1>
         {posts.nodes.map(post => {

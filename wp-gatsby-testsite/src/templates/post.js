@@ -5,6 +5,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import styles from "./post.module.css"
 
 const PostTemplate = ({ data }) => {
@@ -12,6 +13,7 @@ const PostTemplate = ({ data }) => {
   const { title, content } = page
   return (
     <Layout>
+      <SEO title={title || "Untitled"} />
       <div className={styles.postContainer}>
         <article>
           <h4 className={styles.blogTitle}>{title}</h4>
