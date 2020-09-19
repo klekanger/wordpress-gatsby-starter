@@ -28,9 +28,7 @@ const PostPreviewGrid = props => {
               className={styles.excerpt}
               dangerouslySetInnerHTML={{ __html: node.excerpt }}
             />
-            <Link to={node.uri} className={styles.excerpt}>
-              Les mer...
-            </Link>
+
             <p style={{ color: "#999" }}>Publisert: {node.date}</p>
           </li>
         ))}
