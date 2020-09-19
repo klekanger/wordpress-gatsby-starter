@@ -1,8 +1,14 @@
 @import "../styles/custom-media.css";
 @import "../styles/custom-properties.css";
 
-.container {
-  margin: auto;
-  width: 100%;
-  background-color: grey;
+.root {
+  box-sizing: border-box;
+  max-width: 960px;
+  padding: 1.5em;
+  margin: 0 auto;
+  background-color: var(--color-background);
+
+  @media (--media-min-small) {
+    padding: 2em;
+  }
 }
