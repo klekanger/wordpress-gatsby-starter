@@ -22,6 +22,18 @@ export const query = graphql`
           title
           excerpt
           content
+          featuredImage {
+            node {
+              localFile {
+                childImageSharp {
+                  fluid (maxWidth: 1920) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+              altText
+            }
+          }
         }
       }
     }
@@ -40,7 +52,7 @@ const IndexPage = props => {
   }
 
   const postNodes = (data || {}).allWpPost
-
+    
   // Replace with relevant keywords for your site (for SEO)
   return (
     <Layout>
