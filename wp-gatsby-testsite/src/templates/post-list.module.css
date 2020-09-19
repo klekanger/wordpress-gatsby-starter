@@ -1,9 +1,13 @@
 @import "../styles/custom-media.css";
 @import "../styles/custom-properties.css";
 
+
 .blogTitle {
   font-family: var(--font-family-sans);
   font-size: var(--font-title1-size);
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .blogText {
@@ -11,15 +15,12 @@
   font-size: var(--font-base-size);
 }
 
+
 .postContainer {
-  margin: 10px 20px 40px -10px;
+  margin: 10px 20px 40px 10px;
   padding: 0;
   list-style: none;
   display: block;
-
-  @media (--media-min-medium) {
-    margin-left: 10px;
-  }
 
   @media (--media-min-large) {
     margin-left: 40px;
@@ -45,12 +46,12 @@
   width: 90vw;
 }
 
-.postContainer > div > p,
-h1,
-h2,
-h3,
-h4 {
-  padding-left: 20px;
+.postContainer h1 {
+  padding-left: 0;
+}
+
+.postContainer hr {
+  margin-top: 3em;
 }
 
 .pageNav {

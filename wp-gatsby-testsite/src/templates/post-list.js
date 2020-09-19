@@ -4,6 +4,7 @@
 
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -12,6 +13,7 @@ import styles from "./post-list.module.css"
 const PostList = props => {
   const { data } = props
   const posts = data && data.posts
+
   const { currentPage, numPages } = props.pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
@@ -21,19 +23,35 @@ const PostList = props => {
   return (
     <Layout>
       <SEO title={data.site.siteMetadata.title || "Untitled"} />
-      <div className={styles.postContainer}>
+        <div className={styles.postContainer}>
         <h1>Alle innlegg</h1>
         {posts.nodes.map(post => {
           return (
-            <div key={post.id} className={styles.listItem}>
-              <Link to={post.uri}>
-                <h3>{post.title}</h3>
-              </Link>
-              <p dangerouslySetInnerHTML={{ __html: post.excerpt }} />
-            </div>
+            
+              <div key={post.id} className={styles.listItem}>
+                <Link to={post.uri}>
+                  <h2 className={styles.blogTitle}>{post.title}</h2>
+                  {post?.featuredImage?.node?.localFile?.childImageSharp
+                    ?.fluid ? (
+                    <Img
+                      fluid={
+                        post?.featuredImage?.node?.localFile?.childImageSharp
+                          ?.fluid
+                      }
+                      alt={post?.featuredImage?.node?.altText}
+                    />
+                  ) : null}
+                </Link>
+                <span
+                  className={styles.blogText}
+                  dangerouslySetInnerHTML={{ __html: post.excerpt }}
+                />
+                <hr />
+              </div>
           )
-        })}
 
+        })}
+          </div>
         <ul className={styles.pageNav}>
           {!isFirst && (
             <Link
@@ -66,7 +84,7 @@ const PostList = props => {
             </Link>
           )}
         </ul>
-      </div>
+      
     </Layout>
   )
 }
@@ -92,6 +110,18 @@ export const query = graphql`
         slug
         date(formatString: "DD. MMMM YYYY", locale: "NB-NO")
         title
+        featuredImage {
+          node {
+            localFile {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+            altText
+          }
+        }
       }
     }
   }
