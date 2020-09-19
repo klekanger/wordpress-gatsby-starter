@@ -3,26 +3,35 @@
 
 import React from "react"
 import { graphql } from "gatsby"
-
+import Img from "gatsby-image"
 import Layout from "../components/layout"
+import Container from "../components/container"
 import SEO from "../components/seo"
 import styles from "./post.module.css"
 
 const PostTemplate = ({ data }) => {
   const { page } = data
-  const { title, content } = page
+  const { title, content, featuredImage } = page
+  
   return (
     <Layout>
       <SEO title={title || "Untitled"} />
-      <div className={styles.postContainer}>
+      <Container>
         <article>
-          <h4 className={styles.blogTitle}>{title}</h4>
-          <span
-            className={styles.blogText}
-            dangerouslySetInnerHTML={{ __html: content }}
-          />
+          {featuredImage?.node?.localFile?.childImageSharp?.fluid ? (
+                <Img 
+                  fluid={featuredImage.node.localFile.childImageSharp.fluid}
+                  alt={featuredImage?.node?.altText || "Toppbilde"}
+                  />
+                ) : null
+              } 
+            <h1 className={styles.blogTitle}>{title}</h1>
+            <span
+              className={styles.blogText}
+              dangerouslySetInnerHTML={{ __html: content }}
+            />
         </article>
-      </div>
+        </Container>
     </Layout>
   )
 }
@@ -35,6 +44,18 @@ export const query = graphql`
     page: wpPost(id: { eq: $id }) {
       title
       content
+      featuredImage {
+        node {
+          localFile {
+              childImageSharp {
+              fluid (maxWidth: 1920) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+          altText
+        }
+      }
     }
   }
 `

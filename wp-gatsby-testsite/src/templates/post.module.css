@@ -4,6 +4,7 @@
 .blogTitle {
   font-family: var(--font-family-sans);
   font-size: var(--font-title1-size);
+  padding-left: 0;
 }
 
 .blogText {
@@ -16,7 +17,7 @@
   padding: 0;
   list-style: none;
   display: block;
-
+  
   @media (--media-min-medium) {
     margin-left: 10px;
   }
