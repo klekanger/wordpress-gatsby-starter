@@ -9,7 +9,7 @@
 .wrapper {
   margin: 0 auto;
   padding: 10px 0 10px 0;
-  background-color: rgb(138, 138, 138);
+  background-color:var(--color-background3);
   justify-content: space-between;
 }
 
